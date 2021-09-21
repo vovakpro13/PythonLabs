@@ -9,7 +9,7 @@ print('Good!')
 
 width = int(input('Enter the width of the rectangle: '))
 
-perimeter = length * width
+perimeter = (length + width) * 2
 diagonal = math.sqrt(length ** 2 + width ** 2)
 
 print('\nAlmost Done! \n\nThe perimeter equals to ' + str(perimeter) + '\nThe diagonal equals to ' + str(diagonal))
