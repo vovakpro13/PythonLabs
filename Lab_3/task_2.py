@@ -13,9 +13,11 @@ mode = int(input('Choose mode:'))
 
 def getLetters(word):
     letters = {}
+
     for index in range(len(word)):
         letter = word[index]
         i = index
+
         while not word[slice(i, len(word))].find(letter) == -1:
             if letters.get(letter):
                 letters[letter] = int(letters.get(letter)) + 1
@@ -26,10 +28,12 @@ def getLetters(word):
     return letters
 
 if mode == 1:
-    letters = []
-    for letter in secondWord:
-        letters.append(letter in firstWord)
-    print(str(all(letters)))
+    flag = True
+    for letter in firstWord:
+        if not letter in secondWord and flag:
+            flag = False
+
+    print(flag)
 
 elif mode == 2:
     first = getLetters(firstWord)
@@ -38,14 +42,13 @@ elif mode == 2:
     firstKeys = list(first)
     secondKeys = list(second)
 
-    result = []
+    flag = True
 
-    if len(firstKeys) == len(secondKeys):
-        for key in secondKeys:
-            result.append(first.get(key) == second.get(key))
-        print(all(result))
-    else:
-        print(False)
+    for key in firstKeys:
+        if not first.get(key) <= second.get(key) and flag:
+            flag = False
+
+    print(flag)
 
 else:
     print('Mode is not correct!')

@@ -14,7 +14,7 @@ for i in range(n):
 S = 0
 
 for num in c:
-    if not num % 2 == 0:
+    if num % 2 == 1:
         S += num
 
 print('a = ', a)

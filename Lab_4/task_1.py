@@ -2,9 +2,14 @@ import math
 
 n = int(input('Enter n:'))
 
-S = 0
+result = 0
 
-for num in range(1, n):
-    S += math.sin(num)
+sum_of_sinus = 0
 
-print(1/S)
+for count in range(1, n):
+    sum_of_sinus += math.sin(num)
+
+    if not sum_of_sinus == 0:
+        result += 1 / sum_of_sinus
+
+print(result)

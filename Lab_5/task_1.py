@@ -29,7 +29,8 @@ for item in b :
 b_min = 0
 
 for col in range(n):
-    col_min = 100000
+    col_min = 1000000000
+
     for row in range(m):
         if col_min > abs(b[row][col]):
             col_min = abs(b[row][col])
@@ -39,5 +40,5 @@ for col in range(n):
         b[row][col] = b[row][col] * col_min
 
 
-for item in b :
+for item in b:
     print(item)
