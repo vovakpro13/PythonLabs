@@ -12,6 +12,6 @@ a = task_1.get_a(x, y, z, b)
 print('b = ', b)
 print('a = ', a)
 
-array = [1,3,2]
+array = [1, 3, 2]
 print('Array: ', array)
 print('Max from array: ', task_2.find_max(array, array[0]))
