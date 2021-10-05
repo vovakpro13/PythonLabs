@@ -116,13 +116,7 @@ second_time_index = int(input('Enter second time index: '))
 t1 = times[first_time_index]
 t2 = times[second_time_index]
 
-if t1.get('hours') < t2.get('hours'):
+if t1.get('hours') < t2.get('hours') or (t1.get('hours') == t2.get('hours') and t1.get('minutes') < t2.get('minutes')):
     print('Time ' + str(times[first_time_index]) + ' was earlier')
 else:
-    if t1.get('hours') == t2.get('hours'):
-        if t1.get('minutes') < t2.get('minutes'):
-            print('Time ' + str(times[first_time_index]) + ' was earlier')
-        else:
-            print('Time ' + str(times[second_time_index]) + ' was earlier')
-    else:
-        print('Time ' + str(times[second_time_index]) + ' was earlier')
+    print('Time ' + str(times[second_time_index]) + ' was earlier')
